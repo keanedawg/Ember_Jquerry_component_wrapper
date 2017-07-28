@@ -11,7 +11,7 @@ export default Ember.Component.extend({
     }.on('didInsertElement'),
 
     valueChanged: function() {
-        
+        this.$().val(this.get('value')).trigger('change');
     }.observes('value')
 
 
